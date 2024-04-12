@@ -9,10 +9,10 @@ def hello(request, username):
 
 
 def about(request):
-    return HttpResponse("About")
+    return render(request, "about.html")
 
 def index(request):
-    return HttpResponse("<h2>Index Page</h2>")
+    return render(request, "index.html")
 
 def projects(request):
     projects = list(Project.objects.values())
